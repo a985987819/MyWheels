@@ -13,7 +13,7 @@
 
     export default {
         setup() {
-            const asideVisible = inject<Ref<boolean>>('xxx');
+            const asideVisible = inject<Ref<boolean>>('asideVisible');
             const toggleaside = () => {
                 asideVisible.value = !asideVisible.value;
             };
