@@ -29,6 +29,10 @@
         display: flex;
         padding: 16px;
         position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: 10;
         justify-content: center;
         align-items: center;
@@ -52,7 +56,6 @@
             width: 24px;
             height: 24px;
             background: red;
-            border: 1px solid red;
             position: absolute;
             left: 16px;
             top: 50%;
