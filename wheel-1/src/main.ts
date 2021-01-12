@@ -1,19 +1,22 @@
 import {createApp} from 'vue';
+// @ts-ignore
 import App from "./App.vue";
-import './index.css';
+import './index.scss';
 import {createWebHashHistory, createRouter} from 'vue-router';
-import Laoduan from './components/Laoduan.vue';
-import Laoduan2 from "./components/Laoduan2.vue";
+// @ts-ignore
+import Doc from './views/Doc.vue';
+// @ts-ignore
+import Home from "./views/Home.vue";
 
 const history = createWebHashHistory();
 const router = createRouter({
     history: history,
     routes: [
         {
-            path: '/', component: Laoduan
+            path: '/', component: Home
         },
         {
-            path: '/laoduan2', component: Laoduan2
+            path: '/Doc', component: Doc
         }
     ]
 });
