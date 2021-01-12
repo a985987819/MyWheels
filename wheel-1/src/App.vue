@@ -1,14 +1,13 @@
 <template>
-  <div>hi</div>
+  <div>导航栏|
+  <router-link to="/">Laoduan|</router-link>
+  <router-link to="/laoduan2">Laoduan2</router-link>
+  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Laoduan from './components/Laoduan'
-export default class App extends Vue{
-  components: {
-    HelloWorld,
-    Laoduan:Laoduan
-  }
+export default{
+  name:'App',
 }
 </script>
