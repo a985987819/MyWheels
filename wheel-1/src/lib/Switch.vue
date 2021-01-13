@@ -3,7 +3,6 @@
             @click="toggle">
         <span></span>
     </button>
-    <div>{{value}}</div>
 </template>
 
 <script lang="ts">
@@ -15,7 +14,7 @@
         },
         setup(props, context) {
             const toggle = () => {
-                context.emit('input', !props.value);
+                context.emit('update:value', !props.value);
             };
             return {toggle};
         }
@@ -29,7 +28,7 @@
         height: $h;
         width: $h*2;
         border: none;
-        background: #c9c9c9;
+        background: #bfbfbf;
         border-radius: $h/2;
         position: relative;
     }
@@ -42,11 +41,11 @@
         width: $h2;
         background: white;
         border-radius: $h2 / 2;
-        transition: left 250ms;
+        transition: all 250ms;
     }
 
     button.checked {
-        background: #ff4b4b;
+        background: #1890ff;
     }
 
     button.checked > span {
@@ -55,5 +54,12 @@
 
     button:focus {
         outline: none;
+    }
+
+    button:active{
+        > span {width: $h2 + 4px;}
+    }
+    button.checked:active{
+        > span {width: $h2 + 4px; margin-left: -4px;}
     }
 </style>
