@@ -17,6 +17,9 @@
                     <li>
                         <router-link to="/doc/tabs">Tabs组件</router-link>
                     </li>
+                    <li>
+                        <router-link to="/doc/slider">Slider组件</router-link>
+                    </li>
                 </ol>
             </aside>
             <main>
@@ -34,7 +37,6 @@
             const asideVisible = inject<Ref<boolean>>('asideVisible')
             return{asideVisible}
         }
-
     }
 </script>
 <style lang="scss" scoped>
