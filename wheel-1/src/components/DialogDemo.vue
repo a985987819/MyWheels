@@ -6,7 +6,17 @@
     <Dialog v-model:visible="x"
             :CloseOnClickOverlay="false"
             :ok="fn1"
-            :cancel="fn2"></Dialog>
+            :cancel="fn2">
+        <template v-slot:title>
+            <strong>
+                警告
+            </strong>
+        </template>
+        <template v-slot:content>
+            <div>你因为吃饭过多</div>
+            <div>被怀疑刷单</div>
+        </template>
+    </Dialog>
 </template>
 <script lang="ts">
     import Dialog from '../lib/Dialog.vue';
