@@ -3,7 +3,10 @@
     </div>
     <h1>示例1</h1>
     <Button @click="toggle">toggle</Button>
-    <Dialog :visible="x"></Dialog>
+    <Dialog v-model:visible="x"
+            :CloseOnClickOverlay="false"
+            :ok="fn1"
+            :cancel="fn2"></Dialog>
 </template>
 <script lang="ts">
     import Dialog from '../lib/Dialog.vue';
@@ -17,9 +20,15 @@
             const toggle = () => {
                 x.value = !x.value;
             };
-return{
-    x,toggle
-}
+            const fn1 = () => {
+
+            };
+            const fn2 = () => {
+
+            };
+            return {
+                x, toggle, fn1, fn2
+            };
         }
     };
 </script>

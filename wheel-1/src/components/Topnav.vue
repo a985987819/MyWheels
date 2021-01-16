@@ -1,11 +1,11 @@
 <template>
     <div class="topnav">
-        <div class="logo" >LOGO</div>
+        <img class="logo" src="../assets/egg.png"/>
         <ul class="menu">
             <li>菜单1</li>
             <li>菜单2</li>
         </ul>
-        <span class="toggleAside" @click="toggleaside()"></span>
+            <img class="toggleAside" @click="toggleaside()" src="../assets/list.png">
     </div>
 </template>
 
@@ -21,9 +21,19 @@
             return {toggleaside};
         },
     };
+
 </script>
 
 <style lang="scss" scoped>
+
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+
     .topnav {
         background: pink;
         display: flex;
@@ -38,6 +48,7 @@
         align-items: center;
 
         > .logo {
+            height: 30px;
             max-width: 6em;
             margin-right: auto;
         }
@@ -55,7 +66,6 @@
         > .toggleAside {
             width: 24px;
             height: 24px;
-            background: red;
             position: absolute;
             left: 16px;
             top: 50%;
