@@ -1,6 +1,10 @@
 <template>
     <div class="topnav">
-        <img class="logo" src="../assets/egg.png"/>
+        <div class="logo">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-dan"></use>
+            </svg>
+        </div>
         <ul class="menu">
             <li>菜单1</li>
             <li>菜单2</li>
@@ -25,16 +29,11 @@
 </script>
 
 <style lang="scss" scoped>
+    $color: #00a5a0;
 
-    .icon {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-    }
 
     .topnav {
+        color: $color;
         display: flex;
         padding: 16px;
         position: relative;
@@ -47,9 +46,12 @@
         align-items: center;
 
         > .logo {
-            height: 30px;
             max-width: 6em;
             margin-right: auto;
+            >svg{
+                width: 34px;
+                height: 34px;
+            }
         }
 
         > .menu {
