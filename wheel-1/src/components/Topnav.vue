@@ -1,23 +1,23 @@
 <template>
     <div class="topnav">
-        <div class="logo">
+        <router-link to="/" class="logo">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-dan"></use>
             </svg>
-        </div>
-        <ul class="menu">
-            <li>
-                <router-link to="/doc">文档</router-link>
-            </li>
-        </ul>
-        <svg class="toggleAside"
-              @click="toggleaside"
-              v-if="toggleMenuButtonVisible"
-        >
-            <use xlink:href="#icon-list">
+        </router-link>
+    <ul class="menu">
+        <li>
+            <router-link to="/doc">文档</router-link>
+        </li>
+    </ul>
+    <svg class="toggleAside"
+         @click="toggleaside"
+         v-if="toggleMenuButtonVisible"
+    >
+        <use xlink:href="#icon-list">
 
-            </use>
-        </svg>
+        </use>
+    </svg>
     </div>
 </template>
 
@@ -25,10 +25,10 @@
     import {inject, Ref} from 'vue';
 
     export default {
-        props:{
-            toggleMenuButtonVisible:{
-                type:Boolean,
-                default:false
+        props: {
+            toggleMenuButtonVisible: {
+                type: Boolean,
+                default: false
             }
         },
         setup() {
@@ -62,7 +62,8 @@
         > .logo {
             max-width: 6em;
             margin-right: auto;
-            >svg{
+
+            > svg {
                 width: 34px;
                 height: 34px;
             }
