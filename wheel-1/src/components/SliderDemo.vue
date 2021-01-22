@@ -1,7 +1,6 @@
 <template>
-    <h1>这里是Slider组件</h1>
-    <Slider>
-    </Slider>
+    <h1>Slider组件示例1</h1>
+    <slider></slider>
 </template>
 
 <script lang="ts">

@@ -6,6 +6,8 @@
     <Tabs v-model:selected="x">
         <Tab title="导航1">内容1</Tab>
         <Tab title="导航2">内容2</Tab>
+        <Tab title="短">内容3</Tab>
+        <Tab title="这是一个非常非常长的导航">这是一个非常非常长的导航里面的内容</Tab>
     </Tabs>
 </template>
 <script lang="ts">
