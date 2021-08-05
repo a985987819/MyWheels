@@ -26,8 +26,9 @@ export default {
     let dragging = false;
 
     function buttonmove($event: MouseEvent) {
+
       const getMyvalue = () => {
-        let num = ($event.clientX - 170) / 3;
+        let num = ($event.clientX-170) / 3;
         if (num >= 100) {
           num = 100;
         }
@@ -64,9 +65,10 @@ export default {
 
 
     const mousedown = ($event) => {
+      console.log(`打印一下这个$event`,$event)
       dragging = true;
       let btn = document.documentElement.getElementsByTagName('button');
-      btn[0].style.left = $event.clientX - 2 + 'px';
+      btn[0].style.left = $event.clientX  + 'px';
       const getMyvalue = () => {
         let num = ($event.clientX - 170) / 3;
         if (num >= 100) {

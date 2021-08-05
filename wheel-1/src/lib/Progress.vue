@@ -2,9 +2,7 @@
   <div class="gulu-progress"
        :style="progressStyle"
   ></div>
-  <div class="container"
-       :style="progressStyle1"
-  >
+  <div class="container">
     <button>
     </button>
   </div>
