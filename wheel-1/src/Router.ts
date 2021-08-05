@@ -1,4 +1,4 @@
-import {createWebHashHistory, createRouter} from 'vue-router';
+import VueRouter from "vue-router";
 import Doc from './views/Doc.vue';
 import Home from "./views/Home.vue";
 import SwitchDemo from "./components/SwitchDemo.vue";
@@ -12,9 +12,8 @@ import GetStarted from './views/GetStarted.vue';
 import Install from './views/Install.vue';
 
 
-const history = createWebHashHistory();
-export const router = createRouter({
-    history: history,
+export const router = new VueRouter({
+    mode: 'history',
     routes: [
         {
             path: '/', component: Home
